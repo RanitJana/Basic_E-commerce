@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+:root {
+    --salmon-pink--: #F98866;
+    --soft-pink--: #FFF2D7;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+main h1 {
+    margin: 1rem;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: small;
+}
+
+form input[type="submit"] {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: purple;
+    color: white;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgba(128, 0, 128, 0.644);
+    cursor: pointer;
+}
+
+form input[type="submit"]:active {
+    background-color: purple;
+}
+
+form>span {
+    padding: 1rem;
+}
+
+form>span,
+form>span a {
+    font-size: 0.7rem;
+}
+
+.pass-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.pass-container input {
+    width: 100%;
+    padding-right: 1.8rem;
+}
+
+.pass-container>img {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    width: 1rem;
+    transform: translate(-50%,50%);
+}
