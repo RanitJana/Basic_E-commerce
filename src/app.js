@@ -26,5 +26,6 @@ app
     .use('/', require('./routes/home.route.js'))
     .use('/login', require('./routes/login.route.js'))
     .use('/register', require('./routes/register.route.js'))
+    .use('/profile', require('./routes/profile.route.js'))
 
 module.exports = app;

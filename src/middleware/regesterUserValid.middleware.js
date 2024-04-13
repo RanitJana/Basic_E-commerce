@@ -5,7 +5,13 @@ const searchValidity = async function (req, res, next) {
         const user = await userSchema.findOne({
             email: req.body.email
         })
-        if (!user) return next();
+        if (!user) {
+            if (req.body.password1 != req.body.password2) {
+                req.flash('error', "Password didn't match. Please try again");
+                return res.redirect('/register');
+            }
+            return next();
+        }
         req.flash('error', "Account already exist!!");
         res.redirect('/register');
     }
