@@ -9,7 +9,6 @@ const isValidLogin = async function (req, res) {
     const userFind = await userSchema.findOne({
         email: email
     });
-    // console.log(userFind);
     if (!userFind) {
         req.flash('error', "No account is there for this email");
         return res.redirect('/login');
