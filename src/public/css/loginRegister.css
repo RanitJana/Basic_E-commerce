@@ -90,5 +90,9 @@ form>span a {
     right: 0;
     bottom: 50%;
     width: 1rem;
-    transform: translate(-50%,50%);
+    transform: translate(-50%, 50%);
+}
+
+.pass-container img:hover {
+    cursor: pointer;
 }
