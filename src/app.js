@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
+const isValid = require('./middleware/userLoginValid.middleware.js');
 const app = express();
 
 
@@ -23,9 +24,10 @@ app
 
 //routes
 app
-    .use('/', require('./routes/home.route.js'))
     .use('/login', require('./routes/login.route.js'))
     .use('/register', require('./routes/register.route.js'))
+    .use(isValid)   //from this point , below routes are secured
+    .use('/', require('./routes/home.route.js'))
     .use('/profile', require('./routes/profile.route.js'))
 
 module.exports = app;
