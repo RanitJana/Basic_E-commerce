@@ -29,5 +29,6 @@ app
     .use(isValid)   //from this point , below routes are secured
     .use('/', require('./routes/home.route.js'))
     .use('/profile', require('./routes/profile.route.js'))
+    .all('*', (req, res) => { res.render('pageNotFound') })
 
 module.exports = app;
